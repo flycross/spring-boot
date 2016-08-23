@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.EnableMBeanExport;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 
 /**
@@ -14,6 +16,8 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
  *
  */
 @SpringBootApplication
+@EnableMBeanExport(defaultDomain = "chapter2")
+@SessionAttributes("authorizationRequest")
 public class Application extends SpringBootServletInitializer {
 
 	@Override
