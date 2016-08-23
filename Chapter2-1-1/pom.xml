@@ -35,9 +35,15 @@
 			<scope>test</scope>
 		</dependency>
 
-	 
 		
-	  <dependency>
+			<!-- tomcat支持  -->
+	 
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<exclusions>
@@ -47,6 +53,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+ 
 		
 
 
@@ -57,6 +65,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+					<configuration>
+					<!-- 指明main方法所在的类 -->
+					<!-- <mainClass>com.aukey.cas.Application</mainClass> -->
+					<mainClass>com.didispace.Application</mainClass>
+					 
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
