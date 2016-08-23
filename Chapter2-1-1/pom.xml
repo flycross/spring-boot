@@ -6,7 +6,7 @@
 	<groupId>com.didispace</groupId>
 	<artifactId>Chapter2-1-1</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Chapter2-1-1</name>
 	<description></description>
@@ -35,10 +35,19 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
+	 
+		
+	  <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		
 
 
 	</dependencies>
